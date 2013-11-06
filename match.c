@@ -82,7 +82,7 @@ int main(int argc,char *argv[])
             {
                 if(match(argv[1],line_buffer)==1)/*match the regular expression,if success, return 1*/
                 {
-                    printf("%s\n",line_buffer);/*print the results*/
+                    printf("%s:%s\n",argv[i],line_buffer);/*print the results*/
                 }
             }
             
@@ -90,4 +90,3 @@ int main(int argc,char *argv[])
         }
         return 0;
     }
-
