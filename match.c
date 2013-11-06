@@ -78,11 +78,12 @@ int main(int argc,char *argv[])
                 printf("%s: read failure.\n",argv[i]);
             }
             
+            
             else while (fgets(line_buffer,sizeof(line_buffer),fp))
             {
                 if(match(argv[1],line_buffer)==1)/*match the regular expression,if success, return 1*/
                 {
-                    printf("%s:%s\n",argv[i],line_buffer);/*print the results*/
+                    printf("search %s:%s\n",argv[i-1],line_buffer);/*print the results*/
                 }
             }
             
@@ -90,3 +91,4 @@ int main(int argc,char *argv[])
         }
         return 0;
     }
+
